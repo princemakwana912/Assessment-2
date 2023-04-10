@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+        integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Assessment 2</title>
+</head>
+
+<body>
+
+    <div class="main-div-container">
+        <div>
+            <div class="heading-btn">
+                <button class="status-btn">
+                    <i class="fa-solid fa-filter"></i>
+                    <span>Status</span>
+                </button>
+                <button class="add-btn">
+                    <span>+ Add Customer</span>
+                </button>
+            </div>
+        
+        
+            <form action=" http://localhost:3000/data" method="post" id="infodata" class="form-container">
+        
+                <div class="form-fields">
+                    <div class="fields">
+                        <label for="name">NAME</label><br>
+                        <input type="text" id="name" name="name" placeholder="Enter Name" class="input-fields" autocomplete="off">
+                    </div>
+        
+                    <div class="fields">
+                        <label for="description">DESCRIPTION</label><br>
+                        <input type="text" id="description" name="description" placeholder="Enter Description"
+                            class="input-fields" autocomplete="off"><br>
+                    </div>
+        
+                    <div class="fields">
+                        <label for="status">STATUS</label><br>
+                        <select name="status" id="status" class="input-fields">
+                            <option value="" disabled selected>Select Status</option>
+                            <option id="0" value="Open">Open</option>
+                            <option id="1" value="Error">Error</option>
+                            <option id="2" value="Success">Success</option>
+                            <option id="3" value="Inactive">Inactive</option>
+                        </select>
+                    </div>
+                </div>
+        
+                <div class="form-fields">
+                    <div class="fields">
+                        <label for="rate">RATE</label><br>
+                        <input type="number" id="rate" name="rate" placeholder="Enter Rate" class="input-fields">
+                    </div>
+        
+                    <div class="fields">
+                        <label for="balance">BALANCE</label><br>
+                        <input type="number" id="balance" name="balance" placeholder="Enter Balance" class="input-fields">
+                    </div>
+        
+                    <div class="fields">
+                        <label for="deposit">DEPOSIT</label><br>
+                        <input type="number" id="deposit" name="deposit" placeholder="Enter Deposit"
+                            class="input-fields"><br><br>
+                    </div>
+                </div>
+        
+                <div class="form-bottom-btn">
+                    <button class="reset-btn" type="reset">Cancel</button>
+                    <button class="save-btn" type="button" onclick="addData()" id="submit">Save</button>
+                    <button hidden class="update-btn" type="button" id="update">Update</button><br><br>
+                </div>
+            </form>
+        </div>
+    
+        <div class="table-body-container">
+            <table id="table">
+                
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
